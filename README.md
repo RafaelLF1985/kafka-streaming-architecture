@@ -1,17 +1,29 @@
 ## Arquitetura
 
 ```mermaid
-flowchart TD
-
-A[PostgreSQL] --> B[Kafka Connect]
-B --> C[Apache Kafka]
-C --> D[Consumers Python]
-C --> E[ksqlDB]
-D --> F[Data Lake]
-E --> F
+graph TD
+    A[PostgreSQL] --> B[Kafka Connect]
+    B --> C[Apache Kafka]
+    C --> D[Consumer Python]
+    C --> E[ksqlDB]
+    D --> F[Data Lake]
+    E --> F
 ```
 
 ## Evidências de Execução
+
+### Docker em execução
+
+![Docker em execução](assets/docker-running.png)
+
+### Evento recebido pelo Consumer
+
+![Consumer recebendo evento](assets/consumer-event.png)
+
+### Evento enviado pelo Producer
+
+![Producer enviando evento](assets/producer-success.png)
+
 
 ### Infraestrutura Docker
 
